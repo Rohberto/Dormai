@@ -1,0 +1,49 @@
+.client-container {
+  padding: 40px 80px;
+width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+   font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    color: var(--tertiary-color);
+    letter-spacing: -0.005em;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: var(--tertiary-color);
+}
+
+.highlight {
+  color: var(--secondary-color);
+}
+.clientelle-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    gap: 60px;
+}
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}

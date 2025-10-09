@@ -85,11 +85,7 @@ const Banner = () => {
       { scale: 1.3 },
       { scale: 1, duration: 1.2, ease: 'power3.out', delay: 0.4 }
     );
-    gsap.fromTo(
-      '.slide-image',
-      { opacity: 0, scale: 1.2 },
-      { opacity: 1, scale: 1, duration: 1.2, ease: 'power3.out', delay: 0.4 }
-    );
+
 
     // Button animations
     gsap.fromTo(

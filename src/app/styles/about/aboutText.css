@@ -18,7 +18,7 @@ color: var(--primary-color);
     margin-bottom: 60px;
 }
 
-.section {
+.aboutSection {
   margin-bottom: 40px;
 }
 
@@ -32,7 +32,7 @@ color: var(--primary-color);
     margin-bottom: 30px;
 }
 
-.section p {
+.aboutSection p {
    font-size: 1rem;
     color: var(--tertiary-color);
     line-height: 1.5;

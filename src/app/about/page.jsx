@@ -9,7 +9,7 @@ import CallToAction from '../Components/About/CallToAction';
 
 const Page = () => {
   return (
-    <div>
+    <div className='about-page'>
         <Header/>
         <AboutUs/>
         <AboutImages/>

@@ -1,54 +1,60 @@
-"use client";
-import '../styles/process.css';
+'use client';
 import { useEffect, useRef } from 'react';
+import '../styles/process.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function OurProcess() {
-      const sectionRef = useRef(null);
-      const headerRef = useRef(null);
+  const sectionRef = useRef(null);
+  const headerRef = useRef(null);
 
-      useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      if (typeof window !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
 
-          // Animation for header and paragraph
-    gsap.fromTo(
-      [headerRef.current],
-      { opacity: 0, y: 30, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: 'power2.out',
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 70%',
-          once: true
-        },
+        // Animation for header and paragraph
+        gsap.fromTo(
+          [headerRef.current],
+          { opacity: 0, y: 30, scale: 0.95 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.8,
+            ease: 'power2.out',
+            stagger: 0.2,
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 70%',
+              once: true,
+            },
+          }
+        );
+
+        gsap.from(".step-card", {
+          y: 80,
+          opacity: 0,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 60%",
+            once: true,
+          },
+        });
       }
-    );
+    }, sectionRef);
 
-      gsap.from(".step-card", {
-        y: 80,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 60%",
-          once: true
-        },
-      });
-      }, []);
+    return () => ctx.revert(); // Cleanup on unmount
+  }, []);
 
   return (
     <section className="process-section" ref={sectionRef}>
       <div className="label">OUR PROCESS</div>
       <h1 className="process-heading" ref={headerRef}>
-From concept sketches to store displays, discover how Dormai ensures top-notch quality with every project.
+        From concept sketches to store displays, discover how Dormai ensures top-notch quality with every project.
       </h1>
       <div className="process-steps">
         <div className="step-card">

@@ -1,0 +1,104 @@
+.signage-section {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 4rem 2rem;
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+.top-text {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+.top-text .highlight {
+  color: #f44336;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.top-text .intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 0.5rem;
+}
+
+.signage-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.text-section {
+  flex: 1 1 500px;
+}
+
+.text-section h2 {
+  color: #f44336;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.text-section p {
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+}
+
+.contact-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #d63326;
+}
+
+.image-section {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .signage-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section h2 {
+    font-size: 2rem;
+  }
+
+  .image-section {
+    margin-top: 2rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+}

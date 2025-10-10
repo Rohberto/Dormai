@@ -29,7 +29,7 @@
 }
 .text-content h1{
     font-family: 'Bebas Neue', cursive;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
     padding: 0;
     color: var(--tertiary-color);
@@ -40,7 +40,7 @@
     color: var(--secondary-color);
 }
 .text-content p{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin: 10px 0;
     color: var(--tertiary-color);
     line-height: 1.5;
@@ -73,7 +73,7 @@
 .action-button {
   display: inline-flex;
     align-items: center;
-  padding: 15px 30px;
+  padding: 10px 30px;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: -0.05em;

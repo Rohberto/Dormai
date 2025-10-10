@@ -40,8 +40,8 @@
     color: var(--secondary-color);
 }
 .text-content p{
-    font-size: 1rem;
-    margin: 20px 0;
+    font-size: 0.7rem;
+    margin: 10px 0;
     color: var(--tertiary-color);
     line-height: 1.5;
     font-weight: 300;

@@ -1,0 +1,63 @@
+.workSection {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url("/Images/Services/service-2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.workSection .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.workSection .content {
+  z-index: 1;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.workSection h1 {
+  font-family: 'Bebas Neue', cursive;
+    font-size: 4.5rem;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+    letter-spacing: -0.005em;
+    line-height: 100%;
+    padding: 10px 0;
+}
+
+.workSection p {
+    font-size: 1rem;
+    margin: 20px 0;
+    color: var(--primary-color);
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .workSection {
+    height: 70vh;
+  }
+
+  .workSection h1 {
+    font-size: 2.5rem;
+  }
+
+  .workSection p {
+    font-size: 1.1rem;
+  }
+}

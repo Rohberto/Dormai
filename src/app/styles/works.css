@@ -226,13 +226,13 @@
   }
 
   .ourwork-arrows button {
-    width: clamp(1.75rem, 5vw, 2.5rem);
-    height: clamp(1.75rem, 5vw, 2.5rem);
-    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
   }
 
   .ourwork-card {
-    min-width: clamp(140px, 40vw, 200px);
+   width: 150px;
   }
 
   .ourwork-section .service-button-container {

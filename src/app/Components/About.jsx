@@ -123,30 +123,56 @@ const About = () => {
     });
 
         // Animation for button
-    if (buttonRef.current && sliderRef.current) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: buttonRef.current,
-          start: 'top 100%',
-          once: true
-        },
-      });
-      tl.fromTo(
-        sliderRef.current,
-        { left: '-100%' },
-        { left: 'calc(100% - 83px)', duration: 0.8, ease: 'power2.out' } // 40px is approx. width of circle
-      ).fromTo(
-        buttonRef.current.querySelector('.button-text'),
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' },
-        '-=0.3' // Overlap with slide animation
-      );
-    }
+     if (buttonRef.current && sliderRef.current) {
+    ScrollTrigger.matchMedia({
+      // Desktop
+      "(min-width: 768px)": function() {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: buttonRef.current,
+            start: 'top 80%',
+            once: true
+          },
+        });
+        tl.fromTo(
+          sliderRef.current,
+          { left: '-100%' },
+          { left: 'calc(100% - 83px)', duration: 0.8, ease: 'power2.out' }
+        ).fromTo(
+          buttonRef.current.querySelector('.button-text'),
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' },
+          '-=0.3'
+        );
+      },
+      // Mobile
+      "(max-width: 767px)": function() {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: buttonRef.current,
+            start: 'top 80%',
+            once: true
+          },
+        });
+        tl.fromTo(
+          sliderRef.current,
+          { left: '-100%' },
+          { left: 'calc(100% - 60px)', duration: 0.8, ease: 'power2.out' } // Adjust 50px as needed for mobile
+        ).fromTo(
+           buttonRef.current.querySelector('.button-text'),
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' },
+          '-=0.3'
+        );
+      }
+    });
+  }
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  // Cleanup on unmount
+  return () => {
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  };
+}, []);
 
   const aboutData = [
     { title: 'Years of Experience', value: 15, description: 'Crafting signs with Indigenous wisdom for over a decade.' },

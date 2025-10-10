@@ -48,7 +48,7 @@
   display: flex;
   gap: 0.625rem;
   justify-content: center;
-   align-self: flex-end;
+  align-self: flex-end;
 }
 
 .ourwork-arrows button {
@@ -75,15 +75,23 @@
 .ourwork-slider {
   max-width: 100%; /* Full width for responsiveness */
   margin: 0 auto;
-  overflow: hidden;
+  overflow: hidden; /* Hide scrollbar and overflow */
+  position: relative; /* Ensure proper positioning for scrolling */
 }
 
 .ourwork-track {
   display: flex;
   gap: 1.5rem;
   scroll-behavior: smooth;
-  overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+  overflow-x: hidden; /* Explicitly hide horizontal overflow */
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  /* Hide scrollbar for all browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.ourwork-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 .ourwork-card {
@@ -160,9 +168,11 @@
   .ourwork-section {
     padding: clamp(1.5rem, 4vw, 2.5rem); /* Reduce padding on tablets */
   }
-.ourwork-heading{
-  text-align: left;
-}
+
+  .ourwork-heading {
+    text-align: left;
+  }
+
   .ourwork-header {
     flex-direction: column; /* Stack header elements vertically */
     align-items: flex-start;
@@ -232,7 +242,7 @@
   }
 
   .ourwork-card {
-   width: 150px;
+    width: 150px;
   }
 
   .ourwork-section .service-button-container {

@@ -208,7 +208,7 @@ const About = () => {
      <div className="button-cont">
       <div className="service-button-container" ref={buttonRef}>
         <div className="button-slider" ref={sliderRef}><span ref={arrowRef}><FaLongArrowAltRight style={{ marginLeft: '8px', verticalAlign: 'middle' }} color="#2F3231" size={36}/></span></div>
-        <Link href="" className="button-text">Learn More About Us</Link>
+        <Link href="/about" className="button-text">Learn More About Us</Link>
       </div>
       </div>
 

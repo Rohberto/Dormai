@@ -147,7 +147,7 @@ const Works = () => {
         <div className="button-cont">
       <div className="service-button-container" ref={buttonRef}>
         <div className="button-slider" ref={sliderRef}><span ref={arrowRef}><FaLongArrowAltRight style={{ marginLeft: '8px', verticalAlign: 'middle' }} color="#fff" size={36}/></span></div>
-        <Link href="" className="button-text">See More Of Our Works</Link>
+        <Link href="/work" className="button-text">See More Of Our Works</Link>
       </div>
       </div>
     </section>

@@ -132,11 +132,11 @@ const Banner = () => {
         </div>
 
         <div className="button-container">
-          <Link href="/portfolio" className="action-button discover-button" ref={discoverButtonRef}>
-            Discover Our Craft <span ref={arrowRef}><FaLongArrowAltRight style={{ marginLeft: '8px', verticalAlign: 'middle' }} color="#FFF" /></span>
+          <Link href="/work" className="action-button discover-button" ref={discoverButtonRef}>
+            Check Our Works <span ref={arrowRef}><FaLongArrowAltRight style={{ marginLeft: '8px', verticalAlign: 'middle' }} color="#FFF" /></span>
           </Link>
-          <Link href="/contact" className="action-button quote-button" ref={quoteButtonRef}>
-            Get a Custom Quote
+          <Link href="/services" className="action-button quote-button" ref={quoteButtonRef}>
+            Discover Our Services
           </Link>
         </div>
 

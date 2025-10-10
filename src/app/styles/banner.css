@@ -97,7 +97,7 @@
 }
 
 .quote-button {
-  background-color: var(--accent-color); /* Dark neutral for contrast */
+  background-color: var(--primary-color); /* Dark neutral for contrast */
   color: var(--secondary-color);
 }
 
@@ -105,4 +105,44 @@
   background-color: var(--tertiary-color);
   color: #fff;
   transform: scale(1.05);
+}
+@media (max-width: 1200px) {
+  .banner-container {
+    padding: 15px; /* Reduce padding on tablets */
+    flex-direction: column-reverse; /* Stack sections vertically */
+    gap: 20px;
+    height: 100%;
+  }
+
+  .section {
+    width: 100%; /* Full width for both sections */
+    height: auto; /* Remove fixed height */
+  }
+
+  .section-left {
+    padding: 40px 20px; /* Reduce padding */
+  }
+
+  .section-right {
+    height: 300px; /* Set a reasonable height for images */
+  }
+}
+@media (max-width: 568px) {
+  .text-content h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+}
+.text-content p{
+    font-size: .7rem;
+}
+.button-container {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.action-button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.875rem;
+}
 }

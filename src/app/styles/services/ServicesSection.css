@@ -1,4 +1,4 @@
-.services-section {
+.serviceSection {
   position: relative;
   width: 100%;
   height: 400px;
@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.services-section .overlay {
+.serviceSection .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
@@ -21,13 +21,13 @@
   text-align: center;
 }
 
-.services-section .content {
+.serviceSection .content {
   z-index: 1;
   max-width: 900px;
   padding: 0 1rem;
 }
 
-.services-section h1 {
+.serviceSection h1 {
   font-family: 'Bebas Neue', cursive;
     font-size: 4.5rem;
     margin: 0;
@@ -38,7 +38,7 @@
     padding: 10px 0;
 }
 
-.services-section p {
+.serviceSection p {
     font-size: 1rem;
     margin: 20px 0;
     color: var(--primary-color);

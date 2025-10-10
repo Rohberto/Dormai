@@ -30,7 +30,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section className="services-section" ref={sectionRef}>
+    <section className="serviceSection" ref={sectionRef}>
       <div className="overlay">
         <div className="content">
           <h1 ref={titleRef}>Our Services</h1>

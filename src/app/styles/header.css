@@ -6,16 +6,19 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 80px;
-  position: sticky ;
+  position: sticky;
   z-index: 100;
   top: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensures padding doesn't increase width */
 }
+
 .logoContainer {
   width: 100px;
   height: 100%;
 }
-.logoContainer img{
+
+.logoContainer img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -25,19 +28,23 @@
   list-style: none;
   display: flex;
   gap: 30px;
+  margin: 0;
 }
+
 .navContainer li a {
   font-size: 0.9rem;
   cursor: pointer;
   color: var(--tertiary-color);
   transition: color 0.3s ease;
-    text-decoration: none;
-    letter-spacing: -0.05em;
-    font-weight: 400;
+  text-decoration: none;
+  letter-spacing: -0.05em;
+  font-weight: 400;
 }
+
 .navContainer li a:hover {
   color: var(--secondary-color);
 }
+
 .contactContainer button {
   padding: 8px 16px;
   background-color: var(--secondary-color);
@@ -47,9 +54,131 @@
   cursor: pointer;
   font-size: 0.8rem;
   transition: background-color 0.3s ease;
-    font-weight: 400;
-    letter-spacing: -0.05em;
+  font-weight: 400;
+  letter-spacing: -0.05em;
 }
+
 .contactContainer button:hover {
   background-color: var(--tertiary-color);
+}
+
+.hamburger {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  color: var(--tertiary-color);
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 1024px) {
+  .HeaderContainer {
+    padding: 0 40px; /* Reduce padding on tablets */
+  }
+
+  .logoContainer {
+    width: 80px; /* Slightly smaller logo */
+  }
+
+  .navContainer {
+    gap: 20px; /* Reduce gap between nav items */
+  }
+
+  .navContainer li a {
+    font-size: 0.85rem;
+  }
+
+  .contactContainer button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeaderContainer {
+    padding: 0 20px; /* Further reduce padding on mobile */
+    height: 60px;
+    justify-content: space-between; /* Ensure logo, hamburger, and contact are spaced */
+    align-items: center;
+  }
+
+  .logoContainer {
+    width: 70px;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+.hamburgerContact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+    flex-shrink: 0; /* Prevent hamburger from shrinking */
+  }
+
+  .navContainer {
+    display: none; /* Hidden by default on mobile */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 99; /* Below header but above content */
+  }
+
+  .navContainer.active {
+    display: flex; /* Show when hamburger is clicked */
+  }
+
+  .navContainer li {
+    margin: 10px 0;
+  }
+
+  .navContainer li a {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .contactContainer {
+    flex-shrink: 0; /* Prevent contact button from shrinking */
+  }
+
+  .contactContainer button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .HeaderContainer {
+    padding: 0 15px; /* Minimal padding for small mobile devices */
+  }
+
+  .logoContainer {
+    width: 60px;
+  }
+
+  .hamburger {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .navContainer {
+    padding: 15px 0;
+  }
+
+  .navContainer li a {
+    font-size: 0.9rem;
+  }
+
+  .contactContainer button {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
 }

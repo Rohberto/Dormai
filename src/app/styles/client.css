@@ -20,6 +20,7 @@ width: 100%;
     line-height: 100%;
     margin-bottom: 20px;
     color: var(--tertiary-color);
+    width: 30%;
 }
 
 .highlight {
@@ -29,6 +30,7 @@ width: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 40px 0;
     gap: 60px;
 }
@@ -40,10 +42,76 @@ width: 100%;
   align-items: center;
 }
 
-.logo {
-  width: 120px;
-  height: 80px;
+.client-logo {
+  width: 100%;
+  max-width: 120px; /* Cap logo width */
+  height: auto; /* Maintain aspect ratio */
   object-fit: contain;
   border-radius: 5px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+/* Media Queries for smaller screens */
+@media (max-width: 1024px) {
+  .client-container {
+    padding: 1.5rem 2rem; /* Reduce padding on tablets */
+  }
+
+  .clientelle-content {
+    flex-direction: column; /* Stack content vertically on tablets */
+    align-items: center;
+    gap: 2rem;
+  }
+.subtitle {
+    width: 100%; /* Full width on smaller screens */
+    text-align: center; /* Center subtitle on smaller screens */
+  }
+  .logoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Adjust column size for tablets */
+    gap: 2rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-container {
+    padding: 1rem 1.5rem; /* Further reduce padding on mobile */
+  }
+
+  .title {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+
+  .subtitle {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-align: left;
+  }
+
+  .clientelle-content {
+    padding: 1.5rem 0;
+    gap: 1.5rem;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Smaller columns for mobile */
+    gap: 1rem;
+  }
+
+  .logo {
+    max-width: 100px; /* Slightly smaller logos on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .client-container {
+    padding: 0.75rem 1rem; /* Minimal padding for small mobile devices */
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Even smaller columns for very small screens */
+    gap: 1rem;
+  }
+
+  .logo {
+    max-width: 80px; /* Further reduce logo size */
+  }
 }

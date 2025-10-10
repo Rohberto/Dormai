@@ -101,7 +101,7 @@ export default function ClientelePage() {
         </h1>
         <div className="logoGrid">
           {logos.map((item, i) => (
-            <img className="logo uba" src={item} key={i} alt="logo" />
+            <img className="client-logo" src={item} key={i} alt="logo" />
           ))}
         </div>
       </div>

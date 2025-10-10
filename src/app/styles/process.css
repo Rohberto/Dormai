@@ -1,68 +1,145 @@
 .process-section {
-   padding: 60px 80px;
-  background-color:#fafafa;
+  padding: 3.75rem 5rem;
+  background-color: #fafafa;
   position: relative;
-    border-top: 1px solid #e0e0e0;
-    width: 100%;
-    height: 100vh;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+  min-height: 100vh; /* Changed to min-height to prevent content clipping */
+  box-sizing: border-box; /* Ensures padding doesn't increase width */
+  max-width: 1400px; /* Added max-width for large screens */
+  margin: 0 auto; /* Center the section */
 }
 
 .process-title {
   color: #ff4500;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+  margin-bottom: 0.625rem;
+  text-align: center; /* Center title on smaller screens */
 }
 
 .process-heading {
-   font-family: 'Bebas Neue', cursive;
-    font-size: 4.5rem;
-    margin: 0;
-    padding: 0;
-    color: var(--tertiary-color);
-    letter-spacing: -0.005em;
-    line-height: 100%;
-    padding: 40px 0;
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive font size */
+  margin: 0;
+  padding: 2.5rem 0;
+  color: var(--tertiary-color);
+  letter-spacing: -0.005em;
+  line-height: 100%;
+  text-align: center; /* Center heading on smaller screens */
 }
 
 .process-steps {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1.25rem;
+  flex-wrap: wrap; /* Allow steps to wrap on smaller screens */
 }
 
 .step-card {
   flex: 1;
   background-color: var(--secondary-color);
   color: #fff;
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 10px;
   text-align: left;
+  min-width: 250px; /* Ensure cards don't shrink too much */
 }
 
-.design-card{
-    background-color: #fff;
-    color: var(--tertiary-color);
+.design-card {
+  background-color: #fff;
+  color: var(--tertiary-color);
 }
 
 .step-card h3 {
- font-family: 'Bebas Neue', cursive;
-    font-size: 2.5rem;
-    white-space: wrap;
-    letter-spacing: -0.005em;
-    line-height: 100%;
-    margin-bottom: 20px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(1.75rem, 4vw, 2.5rem); /* Responsive font size */
+  white-space: normal; /* Changed from wrap to normal for better browser support */
+  letter-spacing: -0.005em;
+  line-height: 100%;
+  margin-bottom: 1.25rem;
 }
 
 .step-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 300;
-    letter-spacing: -0.05em;
-    padding: 20px 0;
+  font-size: clamp(0.875rem, 2vw, 1rem); /* Responsive font size */
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  padding: 1.25rem 0;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 1024px) {
+  .process-section {
+    padding: 2rem 2rem; /* Reduce padding on tablets */
+  }
+
+  .process-heading {
+    padding: 1.5rem 0;
+  }
+
+  .process-steps {
+    flex-direction: column; /* Stack cards vertically on tablets */
+    gap: 1rem;
+  }
+
+  .step-card {
+    min-width: 100%; /* Full width for cards on tablets */
+  }
 }
 
 @media (max-width: 768px) {
-  .process-steps {
-    flex-direction: column;
+  .process-section {
+    padding: 1.5rem 1.5rem; /* Further reduce padding on mobile */
+    min-height: auto; /* Remove fixed height for mobile */
+  }
+
+  .process-title {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    text-align: left;
+  }
+
+  .process-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    padding: 1rem 0;
+    text-align: left;
+  }
+
+  .step-card {
+    padding: 1rem;
+  }
+
+  .step-card h3 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+  }
+
+  .step-card p {
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-section {
+    padding: 1rem 1rem; /* Minimal padding for small mobile devices */
+  }
+
+  .process-title {
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    text-align: left;
+  }
+
+  .process-heading {
+    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  }
+
+  .step-card {
+    padding: 0.75rem;
+  }
+
+  .step-card h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+  }
+
+  .step-card p {
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
   }
 }

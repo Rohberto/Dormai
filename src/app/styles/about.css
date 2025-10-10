@@ -1,105 +1,115 @@
 .about-section {
-  padding: 60px 80px;
-  background-color:#fafafa;
+  padding: 3.75rem 5rem;
+  background-color: #fafafa;
   position: relative;
-    border-top: 1px solid #e0e0e0;
-    width: 100%;
-    min-height: 100vh;
-  
-}
-.about-section h2{
-      font-family: 'Bebas Neue', cursive;
-    font-size: 4.5rem;
-    margin: 0;
-    padding: 0;
-    color: var(--tertiary-color);
-    letter-spacing: -0.005em;
-    line-height: 100%;
-    padding: 40px 0;
-}
-.about-section h2 span{
-  color: var(--secondary-color);
-}
-.about-sections{
-     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-      gap: 40px;
-}
-.about-label{
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: -0.05em;
-    margin-bottom: 10px;
-}
-.about-section-right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-}
-.about-section-left{
-  width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-    padding: 40px 20px;
-}
-.about-section-right img{
-    width: 100%;
-      height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+  min-height: auto; /* Changed to auto to prevent content clipping */
+  box-sizing: border-box; /* Ensures padding doesn't increase width */
+  max-width: 1400px; /* Added max-width for large screens */
+  margin: 0 auto; /* Center the section */
 }
 
-.about-header-section h3{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2.5rem;
-    white-space: wrap;
-    color: var(--tertiary-color);
-    letter-spacing: -0.005em;
-    line-height: 100%;
+.about-section h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive font size */
+  margin: 0;
+  padding: 2.5rem 0;
+  color: var(--tertiary-color);
+  letter-spacing: -0.005em;
+  line-height: 100%;
+  text-align: center; /* Center heading on smaller screens */
 }
-.about-header-section h3 span{
+
+.about-section h2 span {
   color: var(--secondary-color);
 }
-.about-header-section p{
-    font-size: 1rem;
-    color: var(--tertiary-color);
-    line-height: 1.5;
-    font-weight: 300;
-    letter-spacing: -0.05em;
-    padding: 20px 0;
+
+.about-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+.about-label {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: clamp(0.7rem, 1.8vw, 0.8rem); /* Responsive font size */
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.625rem;
+}
+
+.about-section-right {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 50%; /* Maintain 50% width on larger screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.about-section-left {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 50%; /* Maintain 50% width on larger screens */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  padding: 2.5rem 1.25rem;
+}
+
+.about-section-right img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.about-header-section h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(1.75rem, 4vw, 2.5rem); /* Responsive font size */
+  white-space: normal; /* Changed from wrap to normal for better browser support */
+  color: var(--tertiary-color);
+  letter-spacing: -0.005em;
+  line-height: 100%;
+}
+
+.about-header-section h3 span {
+  color: var(--secondary-color);
+}
+
+.about-header-section p {
+  font-size: clamp(0.875rem, 2vw, 1rem); /* Responsive font size */
+  color: var(--tertiary-color);
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  padding: 1.25rem 0;
 }
 
 .about-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 1.25rem;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 2.5rem auto;
 }
 
 .about-card {
   background-color: var(--secondary-color);
-  padding: 20px;
+  padding: 1.25rem;
   border: 1px solid #8b5e3c;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -111,41 +121,108 @@
 }
 
 .about-number {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem); /* Responsive font size */
   font-weight: bold;
   color: #6b8e23;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .about-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem); /* Responsive font size */
   color: #2e2e2e;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .about-description {
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw, 1rem); /* Responsive font size */
   color: #555;
 }
 
-@media (max-width: 600px) {
-  .about-header h2 {
-    font-size: 2rem;
+/* Media Queries for smaller screens */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 2rem 2rem; /* Reduce padding on tablets */
   }
 
-  .about-header p {
-    font-size: 1rem;
+  .about-sections {
+    flex-direction: column; /* Stack sections vertically on tablets */
+    gap: 1.5rem;
+  }
+
+  .about-section-right,
+  .about-section-left {
+    max-width: 100%; /* Full width for both sections */
+  }
+.about-section-right{
+  padding: 0;
+}
+.about-section-left{
+  padding: 1.5rem;
+}
+  .about-section h2 {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 1.5rem 1.5rem; /* Further reduce padding on mobile */
+  }
+
+  .about-section h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    padding: 1rem 0;
+  }
+
+  .about-header-section h3 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+  }
+
+  .about-header-section p {
+    padding: 0.75rem 0;
   }
 
   .about-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .about-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 1rem 1rem; /* Minimal padding for small mobile devices */
+  }
+
+  .about-section h2 {
+    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  }
+
+  .about-label {
+    font-size: clamp(0.625rem, 1.5vw, 0.75rem);
+  }
+
+  .about-header-section h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+  }
+
+  .about-header-section p {
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
   }
 
   .about-number {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 3.5vw, 2rem);
   }
 
   .about-title {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+
+  .about-description {
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
   }
 }

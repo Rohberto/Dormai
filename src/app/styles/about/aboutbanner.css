@@ -3,6 +3,8 @@
   padding: 60px 80px;
   margin: 0 auto;
   position: relative;
+  box-sizing: border-box; /* Ensures padding doesn't increase width */
+  max-width: 1400px; /* Added max-width for large screens */
 }
 
 .about-content {
@@ -14,36 +16,37 @@
 }
 
 .about-content h1 {
-font-family: 'Bebas Neue', cursive;
-    font-size: 4.5rem;
-    white-space: wrap;
-    color: var(--tertiary-color);
-    letter-spacing: -0.005em;
-    line-height: 100%;
-      width: 40%;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 4.5rem;
+  white-space: normal; /* Changed from wrap to normal for better browser support */
+  color: var(--tertiary-color);
+  letter-spacing: -0.005em;
+  line-height: 100%;
+  width: 40%;
 }
+
 .highlight {
   color: var(--secondary-color);
 }
 
 .about-text {
-    font-size: 1rem;
-    color: var(--tertiary-color);
-    line-height: 1.5;
-    font-weight: 300;
-    letter-spacing: -0.05em;
-    padding: 20px 0;
-    width: 60%;
+  font-size: 1rem;
+  color: var(--tertiary-color);
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  padding: 20px 0;
+  width: 60%;
 }
 
 .about-images {
-    position: relative;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
   gap: 20px;
- padding: 30px 80px;
- margin-top: -140px;
- z-index: 20;
+  padding: 30px 80px;
+  margin-top: -140px;
+  z-index: 20;
 }
 
 .about-images img {
@@ -52,3 +55,97 @@ font-family: 'Bebas Neue', cursive;
   object-fit: cover;
 }
 
+/* Media Queries for smaller screens */
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 40px 40px; /* Reduce padding on tablets */
+  }
+
+  .about-content {
+    padding: 60px 0; /* Reduce padding */
+  }
+
+  .about-content h1 {
+    font-size: 3.5rem; /* Slightly reduce font size */
+    width: 45%; /* Adjust width for balance */
+  }
+
+  .about-text {
+    width: 55%; /* Adjust to complement h1 width */
+    padding: 15px 0;
+  }
+
+  .about-images {
+    padding: 20px 40px; /* Reduce padding */
+    gap: 15px;
+    margin-top: -100px; /* Adjust overlap */
+  }
+
+  .about-images img {
+    height: 500px; /* Reduce image height */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 30px 20px; /* Further reduce padding on mobile */
+  }
+
+  .about-content {
+    flex-direction: column; /* Stack vertically on mobile */
+    padding: 40px 0;
+    text-align: center; /* Center text */
+  }
+
+  .about-content h1 {
+    width: 100%; /* Full width on mobile */
+    font-size: 3rem; /* Reduce font size */
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    width: 100%; /* Full width on mobile */
+    padding: 10px 0;
+  }
+
+  .about-images {
+    flex-direction: column; /* Stack images vertically */
+    padding: 20px 20px;
+    margin-top: 0; /* Remove overlap on mobile */
+    gap: 20px;
+  }
+
+  .about-images img {
+    width: 100%; /* Full width for each image */
+    height: 400px; /* Reduced height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px 15px; /* Minimal padding for small mobile devices */
+  }
+
+  .about-content {
+    padding: 30px 0;
+  }
+
+  .about-content h1 {
+    font-size: 2.5rem; /* Further reduce font size */
+    margin-bottom: 15px;
+  }
+
+  .about-text {
+    font-size: 0.9rem; /* Slightly reduce text size */
+    padding: 8px 0;
+  }
+
+  .about-images {
+    padding: 15px 15px;
+    gap: 15px;
+  }
+
+  .about-images img {
+    height: 300px; /* Further reduce image height */
+  }
+}

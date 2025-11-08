@@ -8,9 +8,8 @@ export default function Footer() {
         <div className="footer-section logo-section">
           <img src="/Images/logo.png" alt="Dormai Signs" className="footer-logo" />
           <p>
-            We stand as a leading signage company in Nigeria.
-             Dormai Signs Limited is uniquely equipped to address the diverse needs of our clients. 
-             With over 30 years of experience delivering high-quality signage products and exceptional customer service, we are a top choice for signage and branding solutions in Nigeria.
+           Dormai Signs Limited is the leading signage company in Lagos, Nigeria.
+We are uniquely positioned to meet the needs of our clients. With our 30yrs experience, we are the top choice for signage and branding in Nigeria.
           </p>
         </div>
         <div className="footer-section">

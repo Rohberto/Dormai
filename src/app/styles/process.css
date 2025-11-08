@@ -1,25 +1,23 @@
 .process-section {
-  padding: 3.75rem 5rem;
+  padding: 3.75rem 15rem;
   background-color: #fafafa;
   position: relative;
   border-top: 1px solid #e0e0e0;
   width: 100%;
-  min-height: 100vh; /* Changed to min-height to prevent content clipping */
   box-sizing: border-box; /* Ensures padding doesn't increase width */
-  max-width: 1400px; /* Added max-width for large screens */
   margin: 0 auto; /* Center the section */
 }
 
 .process-title {
   color: #ff4500;
-  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+  font-size: clamp(1rem, 2.5vw, 2rem); /* Responsive font size */
   margin-bottom: 0.625rem;
   text-align: center; /* Center title on smaller screens */
 }
 
 .process-heading {
-  font-family: 'Bebas Neue', cursive;
-  font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive font size */
+  font-family: 'Montserrat', cursive;
+font-size: clamp(1.5rem, 6vw, 2.5rem); /* Responsive font size */
   margin: 0;
   padding: 2.5rem 0;
   color: var(--tertiary-color);
@@ -51,8 +49,8 @@
 }
 
 .step-card h3 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: clamp(1.75rem, 4vw, 2.5rem); /* Responsive font size */
+  font-family: 'Montserrat', cursive;
+  font-size: clamp(1rem, 4vw, 2rem); /* Responsive font size */
   white-space: normal; /* Changed from wrap to normal for better browser support */
   letter-spacing: -0.005em;
   line-height: 100%;
@@ -66,7 +64,11 @@
   letter-spacing: -0.05em;
   padding: 1.25rem 0;
 }
-
+@media (max-width: 1440px) {
+  .process-section {
+    padding: 3rem 5rem; /* Reduce padding on large screens */
+  }
+}
 /* Media Queries for smaller screens */
 @media (max-width: 1024px) {
   .process-section {
@@ -109,7 +111,7 @@
   }
 
   .step-card h3 {
-    font-size: clamp(1.5rem, 3.5vw, 2rem);
+        font-size: clamp(1rem, 3.5vw, 1rem);
   }
 
   .step-card p {
@@ -128,7 +130,7 @@
   }
 
   .process-heading {
-    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+    font-size: clamp(1rem, 4.5vw, 1.5rem);
   }
 
   .step-card {
@@ -136,7 +138,7 @@
   }
 
   .step-card h3 {
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
+        font-size: clamp(1rem, 3vw, 1.25rem);
   }
 
   .step-card p {

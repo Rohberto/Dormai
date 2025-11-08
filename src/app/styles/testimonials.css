@@ -1,0 +1,225 @@
+.testimonials {
+padding: 3.75rem 15rem;
+  background-color: #fafafa;
+  position: relative;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't increase width */
+  margin: 0 auto; /* Center the section */
+}
+
+.overlay {
+background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.heading {
+ font-family: 'Montserrat', cursive;
+font-size: clamp(1.5rem, 6vw, 2.5rem); /* Responsive font size */
+  margin: 0;
+  color: var(--tertiary-color);
+  letter-spacing: -0.005em;
+  line-height: 100%;
+  text-align: center; /* Center heading on smaller screens */
+}
+
+.subheading {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: var(--tertiary-color);
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  width: 60%;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.arrow {
+  background: var(--secondary-color);
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  background: var(--sub-primary);
+}
+
+/* Carousel layout */
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease;
+  width: 100%;
+}
+
+.testimonial-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  flex: 0 0 100%;
+  background-color: transparent;
+}
+
+
+.testimonial-card {
+
+  border-radius: 15px;
+  padding: 30px 25px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 230px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); /* Added box-shadow */
+}
+
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.stars {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.stars .filled {
+  color: #ffcc00;
+}
+
+.stars .empty {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.text {
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.author h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.author span {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Dots */
+.dots {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 6px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: var(--secondary-color);
+}
+@media (max-width: 1440px) {
+  .testimonials {
+    padding: 3rem 5rem; /* Reduce padding on large screens */
+  }
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonial-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-track {
+    display: flex;
+    transition: transform 0.8s ease;
+    width: 100%;
+  }
+  .testimonial-group {
+    display: block; /* or grid if you want vertical stacking */
+    min-width: 100%;
+    flex: 0 0 100%;
+    gap: 0;
+    overflow: hidden;
+  }
+  .testimonial-card {
+    min-width: 100%;
+    margin-right: 0;
+  }
+}
+/* Media Queries for smaller screens */
+@media (max-width: 1024px) {
+  .testimonials{
+    padding: 40px 40px; /* Reduce padding on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 30px 20px; /* Further reduce padding on mobile */
+  }
+
+  .header-row {
+    flex-direction: column; /* Stack header elements vertically */
+    gap: 20px;
+  }
+    .heading {
+        font-size: clamp(1.25rem, 5vw, 2rem); /* Slightly smaller for mobile */
+        text-align: center;
+    }
+    .subheading {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-buttons {
+       align-self: flex-end;
+    }
+}

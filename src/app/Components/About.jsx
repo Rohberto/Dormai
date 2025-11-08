@@ -195,13 +195,12 @@ const About = () => {
       
       <div className="about-header-section">
         <h3 ref={headerSecondRef}>Crafting <span>Legacies</span>, One <span>Sign</span> at a Time</h3>
-        <p ref={paraRef}>Dormai Signs Limited is an organization set up and run to provide highly professional and endearing services in the Branding and Sign Making sector of the economy.
+        <p ref={paraRef}>Dormai Signs Limited is the leading signage company in Lagos, Nigeria.
           <br/>
-          We have a combined working experience of over 30 years in the sign making industry.
-          Our key watch word is meeting and surpassing our clients expectations.
+          We are uniquely positioned to meet the needs of our clients.
           <br/>
           <br/>
-       Creativity and exclusivity are woven into our DNA. We deliver fully customizable services, crafting designs that are uniquely yours—tailored to your brand's story and journey. Through our collaborative engagement process, we partner closely with you at every stage to transform your vision into reality. No matter the path—signage production and installation, comprehensive branding, or targeted consultations—we're committed to amplifying your brand's visibility with exceptional value.
+       With our 30yrs experience, we are the top choice for signage and branding in Nigeria.
         </p>
       </div>
 

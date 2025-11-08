@@ -4,7 +4,6 @@
   padding: 3.75rem 5rem;
   font-family: Arial, sans-serif;
   box-sizing: border-box; /* Ensures padding doesn't increase width */
-  max-width: 1400px; /* Added max-width for large screens */
   margin: 0 auto; /* Center the footer */
 }
 
@@ -27,8 +26,8 @@
 }
 
 .footer-section h3 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: clamp(1.75rem, 4vw, 2.5rem); /* Responsive font size */
+  font-family: 'Montserrat', cursive;
+  font-size: clamp(1.75rem, 4vw, 2rem); /* Responsive font size */
   letter-spacing: -0.005em;
   line-height: 100%;
   margin-bottom: 1.25rem;

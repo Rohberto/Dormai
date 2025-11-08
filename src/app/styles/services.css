@@ -3,7 +3,6 @@
   padding: 60px 80px;
   background-color: var(--primary-color);
   box-sizing: border-box; /* Ensures padding doesn't increase width */
-  max-width: 1400px; /* Added max-width for large screens */
   margin: 0 auto; /* Center the section */
 }
 
@@ -28,14 +27,14 @@
 }
 
 .services-header-section h3 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 4.5rem;
+  font-family: 'Montserrat', cursive;
+  font-size: 3rem;
   margin: 0;
   padding: 0;
   color: var(--secondary-color);
   letter-spacing: -0.005em;
   line-height: 100%;
-  width: 50%;
+  width: 60%;
 }
 
 .services-header-section p {
@@ -86,8 +85,8 @@
 }
 
 .service-content h4 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 2.5rem;
+  font-family: 'Montserrat', cursive;
+  font-size: 2rem;
   margin: 0;
   padding: 0;
   color: var(--secondary-color);
@@ -151,7 +150,7 @@
   padding: 0 20px;
   opacity: 0;
   text-decoration: none;
-  font-family: 'Bebas Neue';
+  font-family: 'Montserrat';
   font-size: 20px;
   letter-spacing: -0.005em;
 }
@@ -202,7 +201,7 @@
   }
 
   .services-header-section h3 {
-    font-size: 3rem; /* Slightly smaller for mobile */
+    font-size: 2rem; /* Slightly smaller for mobile */
   }
 
   .services-header-section p {
@@ -223,7 +222,7 @@
   }
 
   .service-content h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
   }
 
@@ -247,7 +246,7 @@
 
   .button-text {
     padding: 0 15px;
-    font-size: 18px;
+    font-size: 10px;
   }
 }
 
@@ -257,7 +256,7 @@
   }
 
   .services-header-section h3 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .services-header-section p {
@@ -274,7 +273,7 @@
   }
 
   .service-content h4 {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
   .service-content p {
@@ -297,7 +296,7 @@
   }
 
   .button-text {
-    font-size: 16px;
+    font-size: 10px;
     padding: 0 10px;
   }
 }

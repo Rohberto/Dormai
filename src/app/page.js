@@ -11,6 +11,7 @@ import Works from './Components/Work';
 import ClientelePage from './Components/Clientelle';
 import Footer from './Components/Footer';
 import OurProcess from './Components/Process';
+import Testimonials from './Components/Testimonials';
 
 const page = () => {
   const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -23,6 +24,7 @@ const page = () => {
       <About/>
       <OurProcess/>
       <ClientelePage/>
+      <Testimonials/>
       <Footer/>
     </div>
   )

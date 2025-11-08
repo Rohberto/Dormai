@@ -6,17 +6,15 @@
   width: 100%;
   min-height: auto; /* Changed to auto to prevent content clipping */
   box-sizing: border-box; /* Ensures padding doesn't increase width */
-  max-width: 1400px; /* Added max-width for large screens */
   margin: 0 auto; /* Center the section */
 }
 
 .about-section h2 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive font size */
+  font-family: 'Montserrat', cursive;
+  font-size: clamp(1.5rem, 6vw, 3rem); /* Responsive font size */
   margin: 0;
   padding: 2.5rem 0;
   color: var(--tertiary-color);
-  letter-spacing: -0.005em;
   line-height: 100%;
   text-align: center; /* Center heading on smaller screens */
 }
@@ -78,11 +76,10 @@
 }
 
 .about-header-section h3 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: clamp(1.75rem, 4vw, 2.5rem); /* Responsive font size */
+  font-family: 'Montserrat', cursive;
+  font-size: clamp(1rem, 4vw, 2.5rem); /* Responsive font size */
   white-space: normal; /* Changed from wrap to normal for better browser support */
   color: var(--tertiary-color);
-  letter-spacing: -0.005em;
   line-height: 100%;
 }
 
@@ -91,7 +88,7 @@
 }
 
 .about-header-section p {
-  font-size: clamp(0.875rem, 2vw, 1rem); /* Responsive font size */
+  font-size: clamp(0.875rem, 2vw, 1.2rem); /* Responsive font size */
   color: var(--tertiary-color);
   line-height: 1.5;
   font-weight: 300;
@@ -137,7 +134,20 @@
   font-size: clamp(0.875rem, 2vw, 1rem); /* Responsive font size */
   color: #555;
 }
-
+.about-section .button-text {
+  display: block;
+  color: #fff;
+  font-size: clamp(0.875rem, 2vw, 1rem); /* Responsive font size */
+  font-weight: 500;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  padding: 0 1.25rem;
+  opacity: 0; /* Hidden until animated */
+  text-decoration: none;
+  font-family: 'Montserrat';
+  letter-spacing: -0.005em;
+}
 /* Media Queries for smaller screens */
 @media (max-width: 1024px) {
   .about-section {
@@ -157,7 +167,7 @@
   padding: 0;
 }
 .about-section-left{
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
 }
   .about-section h2 {
     padding: 1.5rem 0;
@@ -170,12 +180,12 @@
   }
 
   .about-section h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1rem, 5vw, 1.5rem);
     padding: 1rem 0;
   }
 
   .about-header-section h3 {
-    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-size: clamp(1rem, 3.5vw, 1rem);
   }
 
   .about-header-section p {
@@ -191,6 +201,9 @@
   .about-card {
     padding: 1rem;
   }
+  .about-section .button-text {
+  font-size: 12px; /* Responsive font size */
+}
 }
 
 @media (max-width: 480px) {
@@ -199,7 +212,7 @@
   }
 
   .about-section h2 {
-    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+    font-size: clamp(1rem, 4.5vw, 1.5rem);
   }
 
   .about-label {
@@ -207,7 +220,7 @@
   }
 
   .about-header-section h3 {
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-size: clamp(1rem, 3vw, 1.25rem);
   }
 
   .about-header-section p {
@@ -225,4 +238,7 @@
   .about-description {
     font-size: clamp(0.75rem, 1.8vw, 0.875rem);
   }
+    .about-section .button-text {
+  font-size: 10px; /* Responsive font size */
+}
 }

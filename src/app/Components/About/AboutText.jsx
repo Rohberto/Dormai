@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import '../../styles/about/aboutText.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Accordion from '../Accordion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -129,7 +130,7 @@ export default function WhoWeAre() {
         </p>
         <p>
           In the Oil, Gas, and Energy sectors, we are proud that top players like NESTOIL LTD,
-          RAINOIL, T-TIME PETROLEUM, TOTALENGIES, EMADEB ENERGY have entrusted us with their branding,
+          RAINOIL, T-TIME PETROLEUM, TOTALENGIES, EMADEB ENERGY, ETERNA, TRANSCORP ENERGY have entrusted us with their branding,
           signage design, installation, and maintenance needs.
         </p>
         <p>
@@ -138,15 +139,16 @@ export default function WhoWeAre() {
           BANK PLC, ACCION MICROFINANCE BANK, TITAN TRUST BANK, LOTUS BANK, NGX, AFRILAND PROPERTIES
           LTD, CONSOLIDATED HALLMARK INSURANCE PLC, AXAMansard, LEADWAY ASSURANCE PLC, and many more.
         </p>
+          <p>
+          In the Hospitality Sector, we have been privileged to serve all major players like CONSOLIDATED HMO, TRANSCORP HILTON, AFRILAND, TANK & TUMMY, ROYAL PALMS ESTATE and many more.
+        </p>
         <p>
           Dormai Signs Limited remains a key player in the deployment and maintenance of signage
           and branding.
         </p>
-        <div className="AboutlogoGrid">
-          {logos.map((item, i) => (
-            <img className="logo" src={item} key={i} alt="logo" />
-          ))}
-        </div>
+        
+          <Accordion sectionRef={containerRef}/>
+     
       </div>
 
       <div className="aboutSection membership-section">

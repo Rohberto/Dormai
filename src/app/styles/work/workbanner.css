@@ -2,13 +2,27 @@
   position: relative;
   width: 100%;
   height: 400px;
-  background-image: url("/Images/Services/service-2.jpg");
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.background-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Total width will be number of slides * 100% */
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth slide transition */
+}
+
+.slide {
+  flex: 0 0 100%; /* Each slide takes full width of container */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .workSection .overlay {
@@ -29,28 +43,29 @@
 
 .workSection h1 {
   font-family: 'Bebas Neue', cursive;
-    font-size: 4.5rem;
-    margin: 0;
-    padding: 0;
-    color: var(--primary-color);
-    letter-spacing: -0.005em;
-    line-height: 100%;
-    padding: 10px 0;
+  font-size: 4.5rem;
+  margin: 0;
+  padding: 0;
+  color: var(--primary-color);
+  letter-spacing: -0.005em;
+  line-height: 100%;
+  padding: 10px 0;
 }
 
 .workSection p {
-    font-size: 1rem;
-    margin: 20px 0;
-    color: var(--primary-color);
-    line-height: 1.5;
-    font-weight: 300;
-    letter-spacing: -0.05em;
-    margin-bottom: 40px;
+  font-size: 1rem;
+  margin: 20px 0;
+  color: var(--primary-color);
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  margin-bottom: 40px;
 }
 
+/* Media Queries for smaller screens */
 @media (max-width: 768px) {
   .workSection {
-    height: 70vh;
+    height: 60vh;
   }
 
   .workSection h1 {

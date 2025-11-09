@@ -63,7 +63,7 @@ export default function CallToAction() {
     <section className="cta-container" ref={containerRef}>
       <div className="cta-text">
         We are in the business of <span className="highlight">breathing life into brands</span> and
-        <span className="highlight">repositioning them for success</span>. Talk to Dormai Signs Limited today!
+        <span className="highlight"> repositioning them for success</span>. Talk to Dormai Signs Limited today!
       </div>
       <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="cta-button">
         Get Started

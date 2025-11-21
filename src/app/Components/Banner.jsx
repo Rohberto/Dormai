@@ -9,14 +9,12 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const Banner = () => {
   const slides = [
-    { src: '/Images/sign.jpg', label: 'Signs' },
-    { src: '/Images/sign2.jpg', label: 'Signs' },
-    { src: '/Images/sign3.webp', label: 'Signs' },
+    { src: '/Images/bg-3.jpeg', label: '' }
   ];
 
   const branding = [
     { src: '/Images/brand1.jpg', label: 'Branding' },
-    { src: '/Images/brand2.jpg', label: 'Branding' },
+    { src: '/Images/bg-2.jpeg', label: '' }
   ];
 
   const stats = [

@@ -9,12 +9,13 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const Banner = () => {
   const slides = [
-    { src: '/Images/bg-3.jpeg', label: '' }
+    { src: '/Images/wallpaper/transcorp.jpg', label: '' }
   ];
 
   const branding = [
-    { src: '/Images/brand1.jpg', label: 'Branding' },
-    { src: '/Images/bg-2.jpeg', label: '' }
+    { src: '/Images/wallpaper/uba.jpg', label: '' },
+    { src: '/Images/wallpaper/parallex.jpg', label: '' },
+    { src: '/Images/wallpaper/emadeb.jpg', label: '' },
   ];
 
   const stats = [
@@ -110,7 +111,7 @@ const Banner = () => {
   return (
     <div className="banner-container">
       <div className="section section-right">
-        <SliderComponent slides={[...slides, ...branding]} className="background-slider" />
+        <SliderComponent slides={[...slides, ...branding]} timeDiff={5000} className="background-slider" />
       </div>
       <div className="section section-left">
         <div className="text-content" ref={textContentRef}>

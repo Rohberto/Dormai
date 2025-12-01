@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../styles/header.css';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,6 +13,7 @@ const Header = () => {
   const navRef = useRef(null);
   const navItemsRef = useRef([]);
   const contactRef = useRef(null);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -86,7 +88,7 @@ const Header = () => {
 
     <div className='hamburgerContact'>
       <div className="contactContainer" ref={contactRef}>
-        <button>Contact Us</button>
+        <button onClick={() => router.push("/contact")}>Contact Us</button>
       </div>
 
           <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">

@@ -10,14 +10,14 @@ export default function ContactPage() {
         <div className="contact-info">
           <h1>Contact Us</h1>
           <p className="subtitle">
-            Email, call, or complete the form to get in touch with our team.
+           Ready to make your brand stand out? Drop us a message — we design, manufacture, and install signage nationwide.
           </p>
 
           <div className="contact-details">
             <a href="mailto:hello@yourdomain.com" className="email-link">
               hello@yourdomain.com
             </a>
-            <p className="phone">+1 (555) 123-4567</p>
+            <p className="phone">+2348023093389 </p>
           </div>
 
           <div className="support-grid">

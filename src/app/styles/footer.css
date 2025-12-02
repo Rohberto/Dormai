@@ -83,7 +83,16 @@
 .footer-links a:hover {
   text-decoration: underline;
 }
-
+.social-links a {
+  margin: 0 8px;
+  color: #fff;
+  transition: color 0.2s;
+  display: inline-block;
+  vertical-align: middle;
+}
+.social-links a:hover {
+  color: var(--secondary-color);
+}
 /* Media Queries for smaller screens */
 @media (max-width: 1024px) {
   .footer {

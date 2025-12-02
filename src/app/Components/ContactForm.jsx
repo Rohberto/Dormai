@@ -92,11 +92,7 @@ export default function ContactForm() {
         {isSubmitting ? 'Sending...' : 'Submit'}
       </button>
 
-      <p className="terms-text">
-        By contacting us, you agree to our{' '}
-        <a href="/terms">Terms of service</a> and{' '}
-        <a href="/privacy">Privacy Policy</a>
-      </p>
+      
     </form>
   );
 }

@@ -34,7 +34,7 @@
 }
 
 .ourwork-heading {
-  font-family: 'Montserrat', cursive;
+  font-family: var(--font-montserrat), cursive;
   font-size: clamp(1.5rem, 6vw, 3rem); /* Responsive font size */
   margin: 1.25rem 0;
   padding: 0;
@@ -159,7 +159,7 @@
   padding: 0 1.25rem;
   opacity: 0; /* Hidden until animated */
   text-decoration: none;
-  font-family: 'Montserrat';
+  font-family: var(--font-montserrat);
   letter-spacing: -0.005em;
 }
 

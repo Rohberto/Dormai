@@ -14,8 +14,8 @@ export default function ContactPage() {
           </p>
 
           <div className="contact-details">
-            <a href="mailto:hello@yourdomain.com" className="email-link">
-              hello@yourdomain.com
+            <a href="mailto:contact@dormaisignsltd.com" className="email-link">
+              contact@dormaisignsltd.com
             </a>
             <p className="phone">+2348023093389 </p>
           </div>

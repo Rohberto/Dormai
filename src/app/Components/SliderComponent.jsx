@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import '../styles//SliderComponent.css';
 import { gsap } from 'gsap';
-const SliderComponent = ({slides}) => {
+const SliderComponent = ({slides, timeDiff}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
  
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, timeDiff || 3000); // Default to 3 seconds if timeDiff is not provided
     return () => clearInterval(interval);
   }, []);
 

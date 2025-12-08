@@ -19,7 +19,7 @@ export const metadata = {
     siteName: "Dormai Signs",
     images: [
       {
-        url: "https://dormaisignsltd.com/favicon.png",
+        url: "https://dormaisignsltd.com/main-card-logo.png",
         width: 1200,
         height: 630,
         alt: "Dormai Signs Logo",
@@ -34,7 +34,7 @@ export const metadata = {
     description: "Dormai Signs Limited offers premium signage and branding solutions in Lagos, Nigeria.",
     site: "@dormaisigns",
     creator: "@dormaisigns",
-    images: ["https://dormaisignsltd.com/favicon.png"],
+    images: ["https://dormaisignsltd.com/main-card-logo.png"],
   },
 };
 

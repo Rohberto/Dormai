@@ -2,36 +2,56 @@
 
 import Link from 'next/link';
 import '../../styles/work/works.css';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef } from 'react';
 
 const Works = () => {
-  const galleryItems = [
-    { id: 0, title: "TReception", img: "/Images/Services/manufacturing.jpg", description: "Modern reception signage with sleek design.", location: "Lagos, Nigeria" },
-    { id: 1, title: "Eterna Fuel Pump", img: "/Images/Services/service-1.jpg", description: "Custom fuel pump branding with durable materials.", location: "Port Harcourt, Nigeria" },
-    { id: 2, title: "Rainoil Fuel Station", img: "/Images/Services/service-2.jpg", description: "Fuel station branding with vibrant signage.", location: "Oghara, Delta State" },
-    { id: 3, title: "UBA ATM", img: "/Images/Services/service-3.jpg", description: "ATM signage installation for enhanced visibility.", location: "Abuja, Nigeria" },
-    { id: 4, title: "Tank & Timmy Restaurant", img: "/Images/Services/service-4.jpg", description: "Restaurant signage with unique aesthetic.", location: "Ikeja, Lagos" },
-    { id: 5, title: "Eterna Fuel Station", img: "/Images/Services/service-5.jpg", description: "Fuel station branding with modern design.", location: "Warri, Delta State" },
-    { id: 6, title: "Access Bank", img: "/Images/Services/service-6.jpg", description: "Bank signage for customer accessibility.", location: "Enugu, Nigeria" },
-    { id: 7, title: "Abstract Geometric Sign", img: "/Images/Services/service-7.jpg", description: "Artistic geometric signage for creative spaces.", location: "Ibadan, Oyo State" },
-    { id: 8, title: "Rest Room - Gents.", img: "/Images/Services/service-8.jpg", description: "Clear restroom signage for public facilities.", location: "Port Harcourt, Nigeria" },
-  ];
+  const galleryRef = useRef(null);
+
+const galleryItems = [
+  { id: 1, title: "UBA", img: "/Images/works/uba/uba.jpg", images: ["uba.jpg", "uba2.jpeg", "uba3.jpeg", "uba4.jpeg", "uba5.jpeg"] },
+  { id: 2, title: "Eterna", img: "/Images/works/eterna/eterna.jpg", images: ["eterna.jpg", "eterna1.jpeg"] },
+  { id: 3, title: "Rainoil", img: "/Images/works/rainoil/rainoil.jpg", images: ["rainoil.jpg", "rainoil1.jpeg"] },
+  { id: 4, title: "Transcorp", img: "/Images/works/transcorp/transcorp.jpg", images: ["transcorp.jpg", "transcorp2.jpeg", "transcorp3.jpeg", "transcorp4.jpeg"] },
+  { id: 5, title: "Parallex Bank", img: "/Images/works/parallex/parallex.jpg", images: ["parallex.jpg", "parallex2.jpeg", "parallex3.jpeg"] },
+  { id: 6, title: "Emadeb Energy", img: "/Images/works/emadeb/emadeb.jpg", images: ["emadeb.jpg", "emadeb2.jpeg", "emadeb3.jpg", "emadeb4.jpeg", "emadeb5.jpeg", "emadeb6.jpeg", "emadeb7.jpeg"] },
+  { id: 7, title: "Total Energies", img: "/Images/works/Total/total.jpeg", images: ["total.jpeg","total1.jpeg", "total2.jpeg", "total3.jpeg", "total4.jpeg"] },
+  { id: 8, title: "Sayo Silver", img: "/Images/works/sayo/sayo.jpeg", images: ["sayo.jpeg", "sayo1.jpeg", "sayo2.jpeg"] },
+];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.work-card', {
+        opacity: 0,
+        y: 60,
+        duration: 1,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: galleryRef.current,
+          start: 'top 80%',
+          once: true,
+        },
+      });
+    }, galleryRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section className="works-section">
       <div className="label">Our Projects</div>
       <h2 className="works-heading">Featured Works</h2>
-      <div className="works-gallery">
+
+      <div className="works-gallery" ref={galleryRef}>
         {galleryItems.map((item) => (
           <Link href={`/work/${item.id}`} key={item.id} className="work-card-link">
             <div className="work-card">
               <div className="work-image">
                 <img src={item.img} alt={item.title} />
               </div>
-              <div className="work-content">
-                <h3>{item.title}</h3>
-                <p className="work-description">{item.description}</p>
-                <p className="work-location">{item.location}</p>
-              </div>
+              <h3 className="work-title">{item.title}</h3>
             </div>
           </Link>
         ))}

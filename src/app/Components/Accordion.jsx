@@ -125,7 +125,6 @@ const Accordion = ({sectionRef}) => {
           ];
         
           const hospitalityLogos = [
-            "/Images/logos/consolidated.png",
             "/Images/logos/transcorp-hilton.png",
             "/Images/logos/afriland.png",
             "/Images/logos/aedc.jpeg",

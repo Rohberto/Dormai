@@ -48,6 +48,8 @@
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .work-card:hover {
@@ -57,7 +59,7 @@
 
 .work-image {
   width: 100%;
-  height: 200px;
+  height: 250px; /* Slightly taller than before for better visual impact */
   overflow: hidden;
 }
 
@@ -72,53 +74,28 @@
   transform: scale(1.1);
 }
 
-.work-content {
-  padding: 15px;
-  text-align: center;
-}
-
-.work-content h3 {
+.work-title {
   font-family: 'Bebas Neue', cursive;
   font-size: 1.5rem;
   color: #2f3231;
-  margin: 0 0 10px;
+  margin: 15px 15px;
   letter-spacing: -0.005em;
   line-height: 100%;
+  text-align: center;
 }
 
-.work-description {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 5px 0;
-  line-height: 1.5;
-  font-weight: 300;
-  letter-spacing: -0.05em;
-}
-
-.work-location {
-  font-size: 0.8rem;
-  color: #777;
-  margin: 5px 0;
-  font-weight: 300;
-  letter-spacing: -0.05em;
-}
-
-/* Media Queries for smaller screens */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .works-section {
     padding: 40px 40px;
   }
 
   .works-gallery {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .work-image {
-    height: 180px;
-  }
-
-  .work-content h3 {
-    font-size: 1.3rem;
+    height: 220px;
   }
 }
 
@@ -132,23 +109,15 @@
   }
 
   .works-gallery {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
   }
 
   .work-image {
-    height: 250px; /* Increased height for better visibility on mobile */
+    height: 250px;
   }
 
-  .work-content h3 {
-    font-size: 1.2rem;
-  }
-
-  .work-description {
-    font-size: 0.85rem;
-  }
-
-  .work-location {
-    font-size: 0.75rem;
+  .work-title {
+    font-size: 1.4rem;
   }
 }
 
@@ -165,15 +134,7 @@
     height: 200px;
   }
 
-  .work-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .work-description {
-    font-size: 0.8rem;
-  }
-
-  .work-location {
-    font-size: 0.7rem;
+  .work-title {
+    font-size: 1.3rem;
   }
 }

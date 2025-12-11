@@ -8,15 +8,14 @@ import "../styles/works.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryItems = [
-  { title: "TReception", img: "/Images/Services/manufacturing.jpg" },
-  { title: "Eterna Fuel Pump", img: "/Images/Services/service-1.jpg" },
-  { title: "Rainoil Fuel station", img: "/Images/Services/service-2.jpg" },
-  { title: "UBA ATM", img: "/Images/Services/service-3.jpg" },
-  { title: "Tank & Timmy Restaurant", img: "/Images/Services/service-4.jpg" },
-  { title: "Eterna Fuel Station", img: "/Images/Services/service-5.jpg" },
-  { title: "Access Bank", img: "/Images/Services/service-6.jpg" },
-  { title: "Abstract Geometric Sign", img: "/Images/Services/service-7.jpg" },
-  { title: "Rest Room - Gents.", img: "/Images/Services/service-8.jpg" },
+  { title: "UBA", img: "/Images/works/uba/uba.jpg", images: ["uba.jpg", "uba2.jpeg", "uba3.jpeg", "uba4.jpeg", "uba5.jpeg"] },
+  { title: "Eterna", img: "/Images/works/eterna/eterna.jpg", images: ["eterna.jpg", "eterna1.jpeg"] },
+  { title: "Rainoil", img: "/Images/works/rainoil/rainoil.jpg", images: ["rainoil.jpg", "rainoil1.jpeg"] },
+  { title: "Transcorp", img: "/Images/works/transcorp/transcorp.jpg", images: ["transcorp.jpg", "transcorp2.jpeg", "transcorp3.jpeg", "transcorp4.jpeg"] },
+  { title: "Parallex Bank", img: "/Images/works/parallex/parallex.jpg", images: ["parallex.jpg", "parallex2.jpeg", "parallex3.jpeg"] },
+  { title: "Emadeb Energy", img: "/Images/works/emadeb/emadeb.jpg", images: ["emadeb.jpg", "emadeb2.jpeg", "emadeb3.jpg", "emadeb4.jpeg", "emadeb5.jpeg", "emadeb6.jpeg", "emadeb7.jpeg"] },
+  { title: "Total Energies", img: "/Images/works/Total/total.jpeg", images: ["total.jpeg","total1.jpeg", "total2.jpeg", "total3.jpeg", "total4.jpeg"] },
+  { title: "Sayo Silver", img: "/Images/works/sayo/sayo.jpeg", images: ["sayo.jpeg", "sayo1.jpeg", "sayo2.jpeg"] },
 ];
 
 const Works = () => {

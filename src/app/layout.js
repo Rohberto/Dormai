@@ -11,7 +11,18 @@ const bebas = Bebas_Neue({ variable: "--font-bebas", subsets: ["latin"], weight:
 export const metadata = {
   title: "Dormai Signs - Leading Signage Company in Lagos",
   description: "Dormai Signs Limited offers premium signage and branding solutions in Lagos, Nigeria. 30 years of experience. Contact us for custom signs.",
-  keywords: "signage, branding, Lagos, Nigeria, Dormai Signs, custom signs, installation, maintenance",
+  keywords: "Dormai, signage, branding, Lagos, Nigeria, Dormai Signs, custom signs, installation, maintenance",
+
+  // Add favicon support here
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" }, // modern browsers love this
+    ],
+    apple: "/apple-touch-icon.png", // for iOS devices
+    shortcut: "/favicon.ico", // legacy support
+  },
+
   openGraph: {
     title: "Dormai Signs - Leading Signage Company in Lagos",
     description: "Dormai Signs Limited offers premium signage and branding solutions in Lagos, Nigeria.",
@@ -43,7 +54,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable} ${bebas.variable}`}>
         {children}
-        <WhatsAppButton/>
+        <WhatsAppButton />
       </body>
     </html>
   );

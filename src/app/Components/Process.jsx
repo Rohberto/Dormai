@@ -54,7 +54,7 @@ export default function OurProcess() {
     <section className="process-section" ref={sectionRef}>
       <div className="label">OUR PROCESS</div>
       <h1 className="process-heading" ref={headerRef}>
-        From concept sketches to store displays, discover how Dormai ensures top-notch quality with every project.
+       Dormai: From concept sketches to store displays, discover how Dormai ensures top-notch quality with every project.
       </h1>
       <div className="process-steps">
         <div className="step-card">

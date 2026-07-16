@@ -153,7 +153,7 @@ const Services = () => {
     {
       title: 'Manufacturing',
       description: 'Our state-of-the-art facility crafts premium signs with Indigenous-inspired artistry, blending tradition with innovative techniques.',
-      image: '/Images/Services/manufacturing.jpg', // Replace with your image path
+      image: '/dormai/team-work.jpeg', // Replace with your image path
     },
     {
       title: 'Installation',

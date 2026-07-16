@@ -26,7 +26,7 @@ const AboutImages = () => {
 
   return (
     <div className="about-images" ref={imageRef}>
-      <img src="/Images/about.jpg" alt="Team photo" />
+      <img src="/dormai/team.jpeg" alt="Team photo" />
     </div>
   );
 };

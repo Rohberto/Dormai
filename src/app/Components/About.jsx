@@ -186,7 +186,7 @@ const About = () => {
       <h2 ref={headerRef}> At <span>Dormai</span>, We are dedicated to making our clients <span>stand out</span> through exceptional <span>signage solutions</span>, driven by our commitment to building a world-class company rooted in excellence.</h2>
         <div className="about-sections">
      <div className="about-section-right">
-        <img src='/Images/about.jpg' alt='ceo images'/>
+        <img src='/dormai/team.jpeg' alt='ceo images'/>
      </div>
 
      

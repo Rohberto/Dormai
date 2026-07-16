@@ -13,8 +13,8 @@ const ServicesSection = () => {
   // Array of background image paths (replace with your images)
   const backgroundImages = [
     "/Images/Services/maintenance.jpeg",
-    "/Images/Services/manufacturing.jpg",
-    "/Images/Services/installation.jpg",
+    "/dormai/team-work.jpeg",
+   "/dormai/team-work1.jpeg",
   ];
 
   useEffect(() => {

@@ -9,7 +9,7 @@ const SignageDesign = () => {
       title: "Signage Design",
       description:
         "Crafting impactful and visually stunning signage, we bring Brand Dormai’s identity to life with custom-designed solutions. Our signage services combine innovative design with high-quality materials to create durable, eye-catching signs that enhance your brand’s visibility and leave a lasting impression.",
-      image: "/Images/Services/service-2.jpg"
+      image: "/dormai/team-work.jpeg"
     },
     {
       id: 2,
